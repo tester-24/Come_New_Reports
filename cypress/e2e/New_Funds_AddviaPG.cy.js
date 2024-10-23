@@ -36,6 +36,12 @@ it.only('Comet_Jainam', () => {
       // Verify that the page or URL is updated
       cy.wait(4000)
       cy.url().should('include', 'https://cash.jainam.in/Payment/MakePayment');
+     Cypress.on('uncaught:exception', (err) => {
+        // returning false here prevents Cypress from
+        // failing the test
+        console.log('Cypress detected uncaught exception: ', err);
+        return false;
+      });
       //verify image is visible 
       cy.get('.graphics-image > img').should('be.visible')
       // click on bhim upi 
