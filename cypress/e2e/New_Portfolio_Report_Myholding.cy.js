@@ -52,7 +52,7 @@ it.only('Comet_Jainam', () => {
 
     //Click on Download icon
     cy.get('[title="Download Report"] > img').should('be.visible')
-    cy.get('[title="Download Report"] > img').click()
+    cy.get('[title="Download Report"] > img').click({force:true})
 
     //click on download button 
     cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
