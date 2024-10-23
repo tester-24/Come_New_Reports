@@ -34,8 +34,8 @@ it.only('Comet_Jainam', () => {
     cy.wait(1000)
     cy.xpath('/html/body/app-root/app-layout/div/app-portfolio/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').click()
     //select my position
-    cy.wait(1000)
-    cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click()
+    cy.wait(2000)
+    cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click({force:true})
     //Enter Code
     cy.get('.segment2_Text > .w-100').type('wa5320')
     //click on submit button
