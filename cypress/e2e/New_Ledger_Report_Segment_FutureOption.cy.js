@@ -35,8 +35,8 @@ it.only('Comet_Jainam', () => {
    cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').should('be.visible')
    cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').click()
    //Select Future Option
-   cy.wait(500) 
-   cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[3]/span[1]').click()
+   cy.wait(1500) 
+   cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[3]/span[1]').click({force:true})
   // Click on FY dropdown
   cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[2]/kendo-dropdownlist/button').should('be.visible')
   cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[2]/kendo-dropdownlist/button').click()
