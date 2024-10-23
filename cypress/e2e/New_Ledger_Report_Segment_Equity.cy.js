@@ -69,7 +69,7 @@ it.only('Comet_Jainam', () => {
         cy.get('.ng-trigger').should('be.visible')
        
         //Download  EXCEL
-        cy.wait(5000)
+        cy.wait(10000)
        cy.get('.modal-footer > :nth-child(2)').should('be.visible')
        cy.get('.modal-footer > :nth-child(2)').click({force:true})
        
