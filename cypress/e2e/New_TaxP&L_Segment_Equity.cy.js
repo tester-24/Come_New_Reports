@@ -26,8 +26,8 @@ it.only('Comet_Jainam', () => {
     cy.get('[href="#/tax"]').click()
     cy.scrollTo('top')
     //Click on 1st drop down
-    cy.wait(500)
-    cy.xpath('/html/body/app-root/app-layout/div/app-tax/div/form/div[2]/div[1]/kendo-dropdownlist/button').click()
+    cy.wait(1500)
+    cy.xpath('/html/body/app-root/app-layout/div/app-tax/div/form/div[2]/div[1]/kendo-dropdownlist/button').click({force:true})
     //select equity option
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[1]').click()
     cy.scrollTo('top')
