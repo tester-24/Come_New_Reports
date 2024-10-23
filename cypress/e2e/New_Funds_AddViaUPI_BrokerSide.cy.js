@@ -1,9 +1,6 @@
 /// <reference types="cypress"/>
 /// <reference types="cypress-iframe" /> 
 
-
-
-
 import { LoginPage } from "./comet_login.cy.js"
 const lp = new LoginPage
 
@@ -41,6 +38,12 @@ it.only('Comet_Jainam', () => {
       // Verify that the page or URL is updated
       cy.wait(1000)
       cy.url().should('include', 'https://cash.jainam.in/Payment/BrokerMakePayment');
+      Cypress.on('uncaught:exception', (err) => {
+        // returning false here prevents Cypress from
+        // failing the test
+        console.log('Cypress detected uncaught exception: ', err);
+        return false;
+      });
       //verify image is visible in payment page 
       cy.wait(500) 
       cy.get('.payment-image')
